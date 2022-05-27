@@ -10,6 +10,15 @@
    <h2>Books</h2>
    <%= render 'books/index',books: @books %>
    <div>
+    <%= render 'search_form', user: @user %>
+    </div>
+
+    <div id="search_result">
+     <% if @search_book.present? %>
+    <%= render 'search', search_book: @search_book %>
+    <% end %>
+   </div>
+   <div>
     <%= render 'post' %>
    </div>
  </div>
